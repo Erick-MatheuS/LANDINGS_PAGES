@@ -1,0 +1,136 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #bebebe;
+}
+
+.container{
+    width: 72%;
+    height: 95vh;
+    margin: auto;
+    border-radius: 50px;
+    background-image: url("./image/img1.webp");
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size:cover;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Header - INICIO */
+
+.header{
+    width: 91%;
+    margin:23px auto;
+    overflow: hidden;
+    padding: 23px 43px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#logo{
+    float: left;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.navgation{
+    display: inline-block;
+    list-style-type: none;
+    float: right;
+}
+
+.navgation ul{
+    float: right;
+}
+
+.navgation ul li{
+    margin-right: 40px;
+    float: left;
+    font-family: sans-serif;
+    list-style-type: none;
+}
+
+.navgation ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navgation ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 1s ease;
+}
+
+.navgation ul li a:hover{
+    color: #fff;
+}
+
+.navgation ul li a:hover::after{
+    width: 100%;
+}
+
+
+/* CONTEUDO - INICIO */
+
+.content{
+    /* background-color: #e0e0e0; */
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+    color: #fff;
+}
+
+.content > .tittle , .text{
+    margin-bottom: 30px;
+}
+
+.content > .tittle{
+    text-transform: capitalize;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content > .text{
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.content .btn{
+    color: #fff;
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    opacity: 0.9;
+    background-color: transparent;
+    cursor: pointer;
+    transition: ease-out 0.7s;
+}
+
+.content .btn:hover{
+    background-color: #e6e6e6;
+    color: #303030;
+}
