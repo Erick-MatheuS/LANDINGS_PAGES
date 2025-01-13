@@ -8,38 +8,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Landing Page Gamer</title>
-    
 </head>
 <body>
 
     <div class="container">
 
         <header class="header">
-            
-            <div id="logo">
-                Gamer
-            </div>
+            <div id="logo">Gamer</div>
 
-            <nav class="navgation">
-                <ul>
+            <nav class="navigation">
+                <ul class="menu-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Mouses</a></li>
                     <li><a href="#">Peripherals</a></li>
                     <li><a href="#">Keyboards</a></li>
                     <li><a href="#">Services</a></li>
                 </ul>
+
+                <!-- Ícone de três pontos -->
+                <div class="three-dots-menu">
+                    <button class="three-dots-btn">&#x2022;&#x2022;&#x2022;</button>
+                </div>
             </nav>
 
         </header>
 
         <div class="content">
-            <h1 class="tittle">update your setup!</h1>
+            <h1 class="title">Update Your Setup!</h1>
             <p class="text">Welcome!!!</p>
             <button class="btn" type="submit">Access Store</button>
         </div>
 
     </div>
 
-    
+    <!-- Menu Fullscreen -->
+    <div class="menu-cheio">
+        <ul class="menu-lista">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Mouses</a></li>
+            <li><a href="#">Peripherals</a></li>
+            <li><a href="#">Keyboards</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <button class="close-btn">&times;</button>
+    </div>
+
+    <script>
+        
+        const threeDotsBtn = document.querySelector('.three-dots-btn');
+        const menuTelaCheia = document.querySelector('.menu-cheio');
+        const closeBtn = document.querySelector('.close-btn');
+
+        threeDotsBtn.addEventListener('click', () => {
+            menuTelaCheia.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            menuTelaCheia.classList.remove('show');
+        });
+    </script>
+
 </body>
 </html>

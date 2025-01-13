@@ -1,17 +1,16 @@
-
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     height: auto;
     background-color: #bebebe;
 }
 
-.container{
+.container {
     width: 72%;
     height: 95vh;
     margin: auto;
@@ -19,45 +18,46 @@ body{
     background-image: url("./image/img1.webp");
     background-position: auto;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 /* Header - INICIO */
 
-.header{
+.header {
     width: 91%;
-    margin:23px auto;
+    margin: 23px auto;
     overflow: hidden;
     padding: 23px 43px;
     color: #fff;
     cursor: pointer;
 }
 
-#logo{
+#logo {
     float: left;
     font-family: monospace;
     font-size: 1.2rem;
 }
 
-.navgation{
+.navigation {
     display: inline-block;
     list-style-type: none;
     float: right;
 }
 
-.navgation ul{
+.menu-list {
     float: right;
 }
 
-.navgation ul li{
+.menu-list li {
     margin-right: 40px;
     float: left;
     font-family: sans-serif;
     list-style-type: none;
 }
 
-.navgation ul li a{
+.menu-list li a {
     position: relative;
     text-decoration: none;
     color: #fff;
@@ -66,7 +66,7 @@ body{
     transition: color 0.3s ease;
 }
 
-.navgation ul li a::after{
+.menu-list li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -77,19 +77,81 @@ body{
     transition: width 1s ease;
 }
 
-.navgation ul li a:hover{
+.menu-list li a:hover {
     color: #fff;
 }
 
-.navgation ul li a:hover::after{
+.menu-list li a:hover::after {
     width: 100%;
 }
 
+/* 3 Dots Menu - Mobile */
+.three-dots-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.three-dots-btn {
+    font-size: 30px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Menu Fullscreen */
+.menu-cheio {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    z-index: 9999; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-lista {
+    list-style: none;
+}
+
+.menu-lista li {
+    padding: 15px;
+}
+
+.menu-lista li a {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.menu-lista li a:hover {
+    background-color: #444;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 /* CONTEUDO - INICIO */
 
-.content{
-    /* background-color: #e0e0e0; */
+.content {
     width: 100%;
     height: 80vh;
     display: flex;
@@ -100,11 +162,11 @@ body{
     color: #fff;
 }
 
-.content > .tittle , .text{
+.content > .title, .text {
     margin-bottom: 30px;
 }
 
-.content > .tittle{
+.content > .title {
     text-transform: capitalize;
     font-family: "Jaro", sans-serif;
     font-optical-sizing: auto;
@@ -112,12 +174,12 @@ body{
     font-style: normal;
 }
 
-.content > .text{
+.content > .text {
     font-family: monospace;
     font-weight: 600;
 }
 
-.content .btn{
+.content .btn {
     color: #fff;
     display: inline-block;
     padding: 7px 20px;
@@ -130,7 +192,23 @@ body{
     transition: ease-out 0.7s;
 }
 
-.content .btn:hover{
+.content .btn:hover {
     background-color: #e6e6e6;
     color: #303030;
+}
+
+
+/* Mostrar o menu de 3 pontos em telas pequenas */
+@media (max-width: 1400px) {
+    .menu-list {
+        display: none;
+    }
+
+    .three-dots-menu {
+        display: block;
+    }
+}
+
+.show {
+    display: flex;
 }
