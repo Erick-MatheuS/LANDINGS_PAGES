@@ -201,7 +201,7 @@ body {
 /* Mostrar o menu de 3 pontos em telas medias e pequenas */
 @media (max-width: 1400px) {
     .menu-list {
-        display: none;
+        display: none; 
     }
 
     .three-dots-menu {
